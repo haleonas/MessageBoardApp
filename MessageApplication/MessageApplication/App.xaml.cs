@@ -13,8 +13,7 @@ namespace MessageApplication
     {
         
         public static MobileServiceClient _Client = new MobileServiceClient("https://messageapplication.azurewebsites.net");
-        public static Users user = new Users();
-        
+        public static Users User = new Users();
         
         public App()
         {
