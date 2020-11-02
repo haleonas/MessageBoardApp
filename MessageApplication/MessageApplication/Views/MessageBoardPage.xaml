@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MessageApplication.Views.MessageBoardPage"
              xmlns:viewModels="clr-namespace:MessageApplication.Viewmodel;assembly=MessageApplication"
-            
+             NavigationPage.HasBackButton="False"
              Title="Message Board">
     
     <!--x:DataType="viewModels:MessageBoardViewModel"-->
     
     <ContentPage.ToolbarItems>
+        
         <ToolbarItem
             Text="Add"
             Command="{ Binding AddBtn }"

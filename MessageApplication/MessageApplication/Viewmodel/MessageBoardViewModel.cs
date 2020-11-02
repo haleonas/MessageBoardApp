@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Input;
 using MessageApplication.Models;
 using MessageApplication.Views;
+using SQLite;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace MessageApplication.Viewmodel
@@ -20,7 +23,7 @@ namespace MessageApplication.Viewmodel
             AddBtn = new Command(() =>
             {
                 Application.Current.MainPage.Navigation.PushAsync(new AddMessagePage());
-            });
+            }, () => App.GetNetworkAccess() == NetworkAccess.Internet);
             ItemNavigation = new Command(() =>
             {
                 Application.Current.MainPage.DisplayAlert("Success", "YAY", "WOOOO");
@@ -51,15 +54,45 @@ namespace MessageApplication.Viewmodel
 
         public async void UpdateTable()
         {
-            try
+            if (App.GetNetworkAccess() == NetworkAccess.Internet)
             {
-                Posts = await App.Client.GetTable<Posts>().ToListAsync();
+                try
+                {
+                    Posts = await App.Client.GetTable<Posts>().ToListAsync();
+                    using (var conn = new SQLiteConnection(App.DatabaseLocation))
+                    {
+                        conn.DeleteAll<Posts>();
+                        conn.CreateTable<Posts>();
+                        foreach (var post in Posts)
+                        {
+                            conn.Insert(post);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error","Couldn't retrieve posts","ok");
+                }
             }
-            catch (Exception)
+            else
             {
-                await Application.Current.MainPage.DisplayAlert("Error","Couldn't retrieve posts","ok");
+                using (var conn = new SQLiteConnection(App.DatabaseLocation))
+                {
+                    conn.CreateTable<Posts>();
+                    Posts = conn.Table<Posts>().ToList();
+                }
             }
         }
 
+        public static void LogoutUser()
+        {
+            using (var conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.Delete(App.User);
+            }
+            
+            App.User = new Users();
+            //Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
+        }
     }
 }

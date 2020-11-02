@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -17,10 +18,17 @@ namespace MessageApplication.Android
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App(new AndroidSetup()));
+
+            string dbName = "messageBoard.sqlite";
+            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string fullPath = Path.Combine(path, dbName);
+            
+            LoadApplication(new App(new AndroidSetup(),fullPath));
         }
+        
+        
     }
 }

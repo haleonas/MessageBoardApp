@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Foundation;
 using MessageApplication.Bootstrap;
@@ -24,9 +25,16 @@ namespace MessageApplication.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App(new IosSetup()));
+            
+            string dbName = "messageBoard.sqlite";
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),"..","Library");
+            string fullPath = Path.Combine(path,dbName);
+            
+            LoadApplication(new App(new IosSetup(),fullPath));
 
             return base.FinishedLaunching(app, options);
         }
+        
+        
     }
 }

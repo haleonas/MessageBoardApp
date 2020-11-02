@@ -2,6 +2,7 @@
 using MessageApplication.Models;
 using MessageApplication.Services;
 using MessageApplication.Views;
+using SQLite;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -23,6 +24,8 @@ namespace MessageApplication.Viewmodel
             _platformService = platformService;
             Text = _platformService.GetPlatform();
             
+            OnlineStatus = App.GetNetworkAccess() == NetworkAccess.Internet ? "Online" : "Offline";
+            
             LoginBtn = new Command(async () =>
             {
                 if (Username.Equals("") || Password.Equals("")) return;
@@ -34,22 +37,24 @@ namespace MessageApplication.Viewmodel
                 {
                     await Application.Current.MainPage.DisplayAlert("Error", "Something went wrong", "ok");
                 }
-            }, () => !Username.Equals("") && !Password.Equals(""));
+            }, () => !Username.Equals("") && !Password.Equals("") && App.GetNetworkAccess() == NetworkAccess.Internet);
             
             RegisterBtn = new Command(() =>
             {
                 Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
-            });
+            }, () => App.GetNetworkAccess() == NetworkAccess.Internet); //can't register a new user without internet
+        }
 
-            var currentOnlineStatus = Connectivity.NetworkAccess;
-            
-            if (currentOnlineStatus == NetworkAccess.Internet)
+        public static void CheckIfLoggedIn()
+        {
+            using (var conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                OnlineStatus = "Online";
-            }
-            else
-            {
-                OnlineStatus = "Offline";
+                conn.CreateTable<Users>();
+                var table = conn.Table<Users>().ToList();
+                if (table.Count <= 0) return;
+                
+                App.User = table[0];
+                Application.Current.MainPage.Navigation.PushAsync(new MessageBoardPage());
             }
         }
 

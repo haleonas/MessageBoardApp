@@ -11,8 +11,15 @@ namespace MessageApplication.Views
         public LoginPage()
         {
             InitializeComponent();
-            //var viewmodel = new LoginViewModel();
+            
             BindingContext = AppContainer.Container.Resolve<LoginViewModel>();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            InitializeComponent();
+            LoginViewModel.CheckIfLoggedIn();
         }
     }
 }

@@ -3,6 +3,7 @@ using MessageApplication.Bootstrap;
 using MessageApplication.Models;
 using MessageApplication.Views;
 using Microsoft.WindowsAzure.MobileServices;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,17 +13,23 @@ namespace MessageApplication
 {
     public partial class App : Application
     {
-        
+        public static string DatabaseLocation = string.Empty;
         public static readonly MobileServiceClient Client = new MobileServiceClient("https://messageapplication.azurewebsites.net");
         public static Users User = new Users();
         
-        public App(AppSetup setup)
+        public App(AppSetup setup,string databaseLocation)
         {
             InitializeComponent();
 
             AppContainer.Container = setup.CreateContainer();
+            DatabaseLocation = databaseLocation;
 
             MainPage = new NavigationPage(new LoginPage());
+        }
+
+        public static NetworkAccess GetNetworkAccess()
+        {
+            return Connectivity.NetworkAccess;
         }
 
         protected override void OnStart()
@@ -39,5 +46,6 @@ namespace MessageApplication
         {
             // Handle when your app resumes
         }
+        
     }
 }
