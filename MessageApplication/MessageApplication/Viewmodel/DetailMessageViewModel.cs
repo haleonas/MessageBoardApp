@@ -1,11 +1,9 @@
 ﻿using MessageApplication.Models;
-using Xamarin.Forms;
 
 namespace MessageApplication.Viewmodel
 {
     public class DetailMessageViewModel:BaseViewModel
     {
-        private Posts _post;
         private string _message;
         private string _username;
 
@@ -31,7 +29,6 @@ namespace MessageApplication.Viewmodel
 
         public DetailMessageViewModel(Posts post)
         {
-            _post = post;
             Message = post.Message;
             Username = post.Username;
             //Application.Current.MainPage.DisplayAlert("Success", _post.Message, "ok");

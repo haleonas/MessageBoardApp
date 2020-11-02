@@ -1,11 +1,10 @@
 ﻿using Autofac;
 using MessageApplication.Bootstrap;
 using MessageApplication.Viewmodel;
-using Xamarin.Forms;
 
 namespace MessageApplication.Views
 {
-    public partial class LoginPage : ContentPage
+    public partial class LoginPage
     {
         
         public LoginPage()

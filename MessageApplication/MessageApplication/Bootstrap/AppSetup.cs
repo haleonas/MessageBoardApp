@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using MessageApplication.Viewmodel;
-using Microsoft.WindowsAzure.MobileServices;
 
 namespace MessageApplication.Bootstrap
 {

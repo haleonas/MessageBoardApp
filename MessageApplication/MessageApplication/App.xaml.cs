@@ -1,5 +1,4 @@
-﻿using System;
-using MessageApplication.Bootstrap;
+﻿using MessageApplication.Bootstrap;
 using MessageApplication.Models;
 using MessageApplication.Views;
 using Microsoft.WindowsAzure.MobileServices;
@@ -11,7 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace MessageApplication
 {
-    public partial class App : Application
+    public partial class App
     {
         public static string DatabaseLocation = string.Empty;
         public static readonly MobileServiceClient Client = new MobileServiceClient("https://messageapplication.azurewebsites.net");

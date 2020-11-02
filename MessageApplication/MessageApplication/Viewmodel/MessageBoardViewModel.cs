@@ -13,7 +13,7 @@ namespace MessageApplication.Viewmodel
     public class MessageBoardViewModel:BaseViewModel
     {
         private List<Posts> _posts;
-        private Posts itemSelected;
+        private Posts _itemSelected;
         
         public ICommand AddBtn { get; }
         public ICommand ItemNavigation { get; }
@@ -42,13 +42,13 @@ namespace MessageApplication.Viewmodel
 
         public Posts ItemSelected
         {
-            get => itemSelected;
+            get => _itemSelected;
             set
             {
-                itemSelected = value;
-                if (itemSelected == null) return; 
+                _itemSelected = value;
+                if (_itemSelected == null) return; 
                 OnPropertyChanged();
-                Application.Current.MainPage.Navigation.PushAsync(new DetailMessagePage(itemSelected));
+                Application.Current.MainPage.Navigation.PushAsync(new DetailMessagePage(_itemSelected));
             }
         }
 

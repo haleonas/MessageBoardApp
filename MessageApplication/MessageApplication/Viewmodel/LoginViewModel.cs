@@ -14,15 +14,12 @@ namespace MessageApplication.Viewmodel
         private string _password = string.Empty;
         private string _text = string.Empty;
         private string _onlineStatus = string.Empty;
-        private IPlatformService _platformService;
-
         public ICommand LoginBtn { get; }
         public ICommand RegisterBtn { get;  }
 
         public LoginViewModel(IPlatformService platformService)
         {
-            _platformService = platformService;
-            Text = _platformService.GetPlatform();
+            Text = platformService.GetPlatform();
             
             OnlineStatus = App.GetNetworkAccess() == NetworkAccess.Internet ? "Online" : "Offline";
             
