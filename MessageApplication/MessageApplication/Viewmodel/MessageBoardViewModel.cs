@@ -61,8 +61,8 @@ namespace MessageApplication.Viewmodel
                     Posts = await App.Client.GetTable<Posts>().ToListAsync();
                     using (var conn = new SQLiteConnection(App.DatabaseLocation))
                     {
-                        conn.DeleteAll<Posts>();
                         conn.CreateTable<Posts>();
+                        conn.DeleteAll<Posts>();
                         foreach (var post in Posts)
                         {
                             conn.Insert(post);
