@@ -2,6 +2,7 @@
 using MessageApplication.Models;
 using MessageApplication.Services;
 using MessageApplication.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace MessageApplication.Viewmodel
@@ -11,6 +12,7 @@ namespace MessageApplication.Viewmodel
         private string _username = string.Empty;
         private string _password = string.Empty;
         private string _text = string.Empty;
+        private string _onlineStatus = string.Empty;
         private IPlatformService _platformService;
 
         public ICommand LoginBtn { get; }
@@ -38,6 +40,17 @@ namespace MessageApplication.Viewmodel
             {
                 Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
             });
+
+            var currentOnlineStatus = Connectivity.NetworkAccess;
+            
+            if (currentOnlineStatus == NetworkAccess.Internet)
+            {
+                OnlineStatus = "Online";
+            }
+            else
+            {
+                OnlineStatus = "Offline";
+            }
         }
 
         public string Username
@@ -68,6 +81,16 @@ namespace MessageApplication.Viewmodel
             set
             {
                 _text = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string OnlineStatus
+        {
+            get => _onlineStatus;
+            set
+            {
+                _onlineStatus = value;
                 OnPropertyChanged();
             }
         }

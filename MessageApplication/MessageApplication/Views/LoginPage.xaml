@@ -31,7 +31,9 @@
         <Button Text="Register"
                 HorizontalOptions="End"
                 Command="{Binding RegisterBtn}"/>
-       
+       <Label 
+           Text="{Binding OnlineStatus}"
+           HorizontalOptions="Center"/>
     </StackLayout>
 </ContentPage.Content>
 </ContentPage>
