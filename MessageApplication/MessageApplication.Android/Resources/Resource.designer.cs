@@ -35,6 +35,370 @@ namespace MessageApplication.Android
 			global::Xamarin.Auth._MobileServices.Resource.String.title_activity_webview = global::MessageApplication.Android.Resource.String.title_activity_webview;
 			global::PCLCrypto.Resource.String.ApplicationName = global::MessageApplication.Android.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::MessageApplication.Android.Resource.String.Hello;
+			global::Plugin.Permissions.Resource.Attribute.alpha = global::MessageApplication.Android.Resource.Attribute.alpha;
+			global::Plugin.Permissions.Resource.Attribute.coordinatorLayoutStyle = global::MessageApplication.Android.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.Permissions.Resource.Attribute.font = global::MessageApplication.Android.Resource.Attribute.font;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderAuthority = global::MessageApplication.Android.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderCerts = global::MessageApplication.Android.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchStrategy = global::MessageApplication.Android.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchTimeout = global::MessageApplication.Android.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderPackage = global::MessageApplication.Android.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderQuery = global::MessageApplication.Android.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Permissions.Resource.Attribute.fontStyle = global::MessageApplication.Android.Resource.Attribute.fontStyle;
+			global::Plugin.Permissions.Resource.Attribute.fontVariationSettings = global::MessageApplication.Android.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Permissions.Resource.Attribute.fontWeight = global::MessageApplication.Android.Resource.Attribute.fontWeight;
+			global::Plugin.Permissions.Resource.Attribute.keylines = global::MessageApplication.Android.Resource.Attribute.keylines;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchor = global::MessageApplication.Android.Resource.Attribute.layout_anchor;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchorGravity = global::MessageApplication.Android.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Attribute.layout_behavior = global::MessageApplication.Android.Resource.Attribute.layout_behavior;
+			global::Plugin.Permissions.Resource.Attribute.layout_dodgeInsetEdges = global::MessageApplication.Android.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Attribute.layout_insetEdge = global::MessageApplication.Android.Resource.Attribute.layout_insetEdge;
+			global::Plugin.Permissions.Resource.Attribute.layout_keyline = global::MessageApplication.Android.Resource.Attribute.layout_keyline;
+			global::Plugin.Permissions.Resource.Attribute.statusBarBackground = global::MessageApplication.Android.Resource.Attribute.statusBarBackground;
+			global::Plugin.Permissions.Resource.Attribute.ttcIndex = global::MessageApplication.Android.Resource.Attribute.ttcIndex;
+			global::Plugin.Permissions.Resource.Color.browser_actions_bg_grey = global::MessageApplication.Android.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Permissions.Resource.Color.browser_actions_divider_color = global::MessageApplication.Android.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_text_color = global::MessageApplication.Android.Resource.Color.browser_actions_text_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_title_color = global::MessageApplication.Android.Resource.Color.browser_actions_title_color;
+			global::Plugin.Permissions.Resource.Color.notification_action_color_filter = global::MessageApplication.Android.Resource.Color.notification_action_color_filter;
+			global::Plugin.Permissions.Resource.Color.notification_icon_bg_color = global::MessageApplication.Android.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Permissions.Resource.Color.ripple_material_light = global::MessageApplication.Android.Resource.Color.ripple_material_light;
+			global::Plugin.Permissions.Resource.Color.secondary_text_default_material_light = global::MessageApplication.Android.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_max_width = global::MessageApplication.Android.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_min_padding = global::MessageApplication.Android.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_horizontal_material = global::MessageApplication.Android.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_vertical_material = global::MessageApplication.Android.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_horizontal_material = global::MessageApplication.Android.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_vertical_material = global::MessageApplication.Android.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_control_corner_material = global::MessageApplication.Android.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_height = global::MessageApplication.Android.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_width = global::MessageApplication.Android.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_icon_size = global::MessageApplication.Android.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_text_size = global::MessageApplication.Android.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_big_circle_margin = global::MessageApplication.Android.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_content_margin_start = global::MessageApplication.Android.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_height = global::MessageApplication.Android.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_width = global::MessageApplication.Android.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_main_column_padding_top = global::MessageApplication.Android.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_media_narrow_margin = global::MessageApplication.Android.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_icon_size = global::MessageApplication.Android.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_side_padding_top = global::MessageApplication.Android.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_background_padding = global::MessageApplication.Android.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_size_as_large = global::MessageApplication.Android.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Permissions.Resource.Dimension.notification_subtext_size = global::MessageApplication.Android.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad = global::MessageApplication.Android.Resource.Dimension.notification_top_pad;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad_large_text = global::MessageApplication.Android.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Permissions.Resource.Drawable.notification_action_background = global::MessageApplication.Android.Resource.Drawable.notification_action_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg = global::MessageApplication.Android.Resource.Drawable.notification_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low = global::MessageApplication.Android.Resource.Drawable.notification_bg_low;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_normal = global::MessageApplication.Android.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_pressed = global::MessageApplication.Android.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal = global::MessageApplication.Android.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal_pressed = global::MessageApplication.Android.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_icon_background = global::MessageApplication.Android.Resource.Drawable.notification_icon_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_bg = global::MessageApplication.Android.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_low_bg = global::MessageApplication.Android.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_tile_bg = global::MessageApplication.Android.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Permissions.Resource.Drawable.notify_panel_notification_icon_bg = global::MessageApplication.Android.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Permissions.Resource.Id.actions = global::MessageApplication.Android.Resource.Id.actions;
+			global::Plugin.Permissions.Resource.Id.action_container = global::MessageApplication.Android.Resource.Id.action_container;
+			global::Plugin.Permissions.Resource.Id.action_divider = global::MessageApplication.Android.Resource.Id.action_divider;
+			global::Plugin.Permissions.Resource.Id.action_image = global::MessageApplication.Android.Resource.Id.action_image;
+			global::Plugin.Permissions.Resource.Id.action_text = global::MessageApplication.Android.Resource.Id.action_text;
+			global::Plugin.Permissions.Resource.Id.all = global::MessageApplication.Android.Resource.Id.all;
+			global::Plugin.Permissions.Resource.Id.async = global::MessageApplication.Android.Resource.Id.async;
+			global::Plugin.Permissions.Resource.Id.blocking = global::MessageApplication.Android.Resource.Id.blocking;
+			global::Plugin.Permissions.Resource.Id.bottom = global::MessageApplication.Android.Resource.Id.bottom;
+			global::Plugin.Permissions.Resource.Id.browser_actions_header_text = global::MessageApplication.Android.Resource.Id.browser_actions_header_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_items = global::MessageApplication.Android.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_icon = global::MessageApplication.Android.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_text = global::MessageApplication.Android.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_view = global::MessageApplication.Android.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Permissions.Resource.Id.center = global::MessageApplication.Android.Resource.Id.center;
+			global::Plugin.Permissions.Resource.Id.center_horizontal = global::MessageApplication.Android.Resource.Id.center_horizontal;
+			global::Plugin.Permissions.Resource.Id.center_vertical = global::MessageApplication.Android.Resource.Id.center_vertical;
+			global::Plugin.Permissions.Resource.Id.chronometer = global::MessageApplication.Android.Resource.Id.chronometer;
+			global::Plugin.Permissions.Resource.Id.clip_horizontal = global::MessageApplication.Android.Resource.Id.clip_horizontal;
+			global::Plugin.Permissions.Resource.Id.clip_vertical = global::MessageApplication.Android.Resource.Id.clip_vertical;
+			global::Plugin.Permissions.Resource.Id.end = global::MessageApplication.Android.Resource.Id.end;
+			global::Plugin.Permissions.Resource.Id.fill = global::MessageApplication.Android.Resource.Id.fill;
+			global::Plugin.Permissions.Resource.Id.fill_horizontal = global::MessageApplication.Android.Resource.Id.fill_horizontal;
+			global::Plugin.Permissions.Resource.Id.fill_vertical = global::MessageApplication.Android.Resource.Id.fill_vertical;
+			global::Plugin.Permissions.Resource.Id.forever = global::MessageApplication.Android.Resource.Id.forever;
+			global::Plugin.Permissions.Resource.Id.icon = global::MessageApplication.Android.Resource.Id.icon;
+			global::Plugin.Permissions.Resource.Id.icon_group = global::MessageApplication.Android.Resource.Id.icon_group;
+			global::Plugin.Permissions.Resource.Id.info = global::MessageApplication.Android.Resource.Id.info;
+			global::Plugin.Permissions.Resource.Id.italic = global::MessageApplication.Android.Resource.Id.italic;
+			global::Plugin.Permissions.Resource.Id.left = global::MessageApplication.Android.Resource.Id.left;
+			global::Plugin.Permissions.Resource.Id.line1 = global::MessageApplication.Android.Resource.Id.line1;
+			global::Plugin.Permissions.Resource.Id.line3 = global::MessageApplication.Android.Resource.Id.line3;
+			global::Plugin.Permissions.Resource.Id.none = global::MessageApplication.Android.Resource.Id.none;
+			global::Plugin.Permissions.Resource.Id.normal = global::MessageApplication.Android.Resource.Id.normal;
+			global::Plugin.Permissions.Resource.Id.notification_background = global::MessageApplication.Android.Resource.Id.notification_background;
+			global::Plugin.Permissions.Resource.Id.notification_main_column = global::MessageApplication.Android.Resource.Id.notification_main_column;
+			global::Plugin.Permissions.Resource.Id.notification_main_column_container = global::MessageApplication.Android.Resource.Id.notification_main_column_container;
+			global::Plugin.Permissions.Resource.Id.right = global::MessageApplication.Android.Resource.Id.right;
+			global::Plugin.Permissions.Resource.Id.right_icon = global::MessageApplication.Android.Resource.Id.right_icon;
+			global::Plugin.Permissions.Resource.Id.right_side = global::MessageApplication.Android.Resource.Id.right_side;
+			global::Plugin.Permissions.Resource.Id.start = global::MessageApplication.Android.Resource.Id.start;
+			global::Plugin.Permissions.Resource.Id.tag_transition_group = global::MessageApplication.Android.Resource.Id.tag_transition_group;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_event_manager = global::MessageApplication.Android.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_listeners = global::MessageApplication.Android.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Permissions.Resource.Id.text = global::MessageApplication.Android.Resource.Id.text;
+			global::Plugin.Permissions.Resource.Id.text2 = global::MessageApplication.Android.Resource.Id.text2;
+			global::Plugin.Permissions.Resource.Id.time = global::MessageApplication.Android.Resource.Id.time;
+			global::Plugin.Permissions.Resource.Id.title = global::MessageApplication.Android.Resource.Id.title;
+			global::Plugin.Permissions.Resource.Id.top = global::MessageApplication.Android.Resource.Id.top;
+			global::Plugin.Permissions.Resource.Integer.status_bar_notification_info_maxnum = global::MessageApplication.Android.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_page = global::MessageApplication.Android.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_row = global::MessageApplication.Android.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Permissions.Resource.Layout.notification_action = global::MessageApplication.Android.Resource.Layout.notification_action;
+			global::Plugin.Permissions.Resource.Layout.notification_action_tombstone = global::MessageApplication.Android.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Permissions.Resource.Layout.notification_template_custom_big = global::MessageApplication.Android.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Permissions.Resource.Layout.notification_template_icon_group = global::MessageApplication.Android.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_chronometer = global::MessageApplication.Android.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_time = global::MessageApplication.Android.Resource.Layout.notification_template_part_time;
+			global::Plugin.Permissions.Resource.String.status_bar_notification_info_overflow = global::MessageApplication.Android.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Info = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Time = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Title = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionContainer = global::MessageApplication.Android.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionText = global::MessageApplication.Android.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Permissions.Resource.Style.Widget_Support_CoordinatorLayout = global::MessageApplication.Android.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_alpha = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_alpha = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_color = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_keylines = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily = global::MessageApplication.Android.Resource.Styleable.FontFamily;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_font = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontStyle = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontWeight = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_font = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontStyle = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontWeight = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_ttcIndex = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderAuthority = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderCerts = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderPackage = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderQuery = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor = global::MessageApplication.Android.Resource.Styleable.GradientColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem = global::MessageApplication.Android.Resource.Styleable.GradientColorItem;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_color = global::MessageApplication.Android.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_offset = global::MessageApplication.Android.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerColor = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerX = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerY = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endColor = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endX = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endY = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_gradientRadius = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startColor = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startX = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startY = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_tileMode = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_type = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Permissions.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::MessageApplication.Android.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
+			global::Xamarin.Essentials.Resource.Attribute.alpha = global::MessageApplication.Android.Resource.Attribute.alpha;
+			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::MessageApplication.Android.Resource.Attribute.coordinatorLayoutStyle;
+			global::Xamarin.Essentials.Resource.Attribute.font = global::MessageApplication.Android.Resource.Attribute.font;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::MessageApplication.Android.Resource.Attribute.fontProviderAuthority;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderCerts = global::MessageApplication.Android.Resource.Attribute.fontProviderCerts;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderFetchStrategy = global::MessageApplication.Android.Resource.Attribute.fontProviderFetchStrategy;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderFetchTimeout = global::MessageApplication.Android.Resource.Attribute.fontProviderFetchTimeout;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderPackage = global::MessageApplication.Android.Resource.Attribute.fontProviderPackage;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderQuery = global::MessageApplication.Android.Resource.Attribute.fontProviderQuery;
+			global::Xamarin.Essentials.Resource.Attribute.fontStyle = global::MessageApplication.Android.Resource.Attribute.fontStyle;
+			global::Xamarin.Essentials.Resource.Attribute.fontVariationSettings = global::MessageApplication.Android.Resource.Attribute.fontVariationSettings;
+			global::Xamarin.Essentials.Resource.Attribute.fontWeight = global::MessageApplication.Android.Resource.Attribute.fontWeight;
+			global::Xamarin.Essentials.Resource.Attribute.keylines = global::MessageApplication.Android.Resource.Attribute.keylines;
+			global::Xamarin.Essentials.Resource.Attribute.layout_anchor = global::MessageApplication.Android.Resource.Attribute.layout_anchor;
+			global::Xamarin.Essentials.Resource.Attribute.layout_anchorGravity = global::MessageApplication.Android.Resource.Attribute.layout_anchorGravity;
+			global::Xamarin.Essentials.Resource.Attribute.layout_behavior = global::MessageApplication.Android.Resource.Attribute.layout_behavior;
+			global::Xamarin.Essentials.Resource.Attribute.layout_dodgeInsetEdges = global::MessageApplication.Android.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Xamarin.Essentials.Resource.Attribute.layout_insetEdge = global::MessageApplication.Android.Resource.Attribute.layout_insetEdge;
+			global::Xamarin.Essentials.Resource.Attribute.layout_keyline = global::MessageApplication.Android.Resource.Attribute.layout_keyline;
+			global::Xamarin.Essentials.Resource.Attribute.statusBarBackground = global::MessageApplication.Android.Resource.Attribute.statusBarBackground;
+			global::Xamarin.Essentials.Resource.Attribute.ttcIndex = global::MessageApplication.Android.Resource.Attribute.ttcIndex;
+			global::Xamarin.Essentials.Resource.Color.browser_actions_bg_grey = global::MessageApplication.Android.Resource.Color.browser_actions_bg_grey;
+			global::Xamarin.Essentials.Resource.Color.browser_actions_divider_color = global::MessageApplication.Android.Resource.Color.browser_actions_divider_color;
+			global::Xamarin.Essentials.Resource.Color.browser_actions_text_color = global::MessageApplication.Android.Resource.Color.browser_actions_text_color;
+			global::Xamarin.Essentials.Resource.Color.browser_actions_title_color = global::MessageApplication.Android.Resource.Color.browser_actions_title_color;
+			global::Xamarin.Essentials.Resource.Color.notification_action_color_filter = global::MessageApplication.Android.Resource.Color.notification_action_color_filter;
+			global::Xamarin.Essentials.Resource.Color.notification_icon_bg_color = global::MessageApplication.Android.Resource.Color.notification_icon_bg_color;
+			global::Xamarin.Essentials.Resource.Color.ripple_material_light = global::MessageApplication.Android.Resource.Color.ripple_material_light;
+			global::Xamarin.Essentials.Resource.Color.secondary_text_default_material_light = global::MessageApplication.Android.Resource.Color.secondary_text_default_material_light;
+			global::Xamarin.Essentials.Resource.Dimension.browser_actions_context_menu_max_width = global::MessageApplication.Android.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Xamarin.Essentials.Resource.Dimension.browser_actions_context_menu_min_padding = global::MessageApplication.Android.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_inset_horizontal_material = global::MessageApplication.Android.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_inset_vertical_material = global::MessageApplication.Android.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_padding_horizontal_material = global::MessageApplication.Android.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_padding_vertical_material = global::MessageApplication.Android.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_control_corner_material = global::MessageApplication.Android.Resource.Dimension.compat_control_corner_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_notification_large_icon_max_height = global::MessageApplication.Android.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Xamarin.Essentials.Resource.Dimension.compat_notification_large_icon_max_width = global::MessageApplication.Android.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Xamarin.Essentials.Resource.Dimension.notification_action_icon_size = global::MessageApplication.Android.Resource.Dimension.notification_action_icon_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_action_text_size = global::MessageApplication.Android.Resource.Dimension.notification_action_text_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_big_circle_margin = global::MessageApplication.Android.Resource.Dimension.notification_big_circle_margin;
+			global::Xamarin.Essentials.Resource.Dimension.notification_content_margin_start = global::MessageApplication.Android.Resource.Dimension.notification_content_margin_start;
+			global::Xamarin.Essentials.Resource.Dimension.notification_large_icon_height = global::MessageApplication.Android.Resource.Dimension.notification_large_icon_height;
+			global::Xamarin.Essentials.Resource.Dimension.notification_large_icon_width = global::MessageApplication.Android.Resource.Dimension.notification_large_icon_width;
+			global::Xamarin.Essentials.Resource.Dimension.notification_main_column_padding_top = global::MessageApplication.Android.Resource.Dimension.notification_main_column_padding_top;
+			global::Xamarin.Essentials.Resource.Dimension.notification_media_narrow_margin = global::MessageApplication.Android.Resource.Dimension.notification_media_narrow_margin;
+			global::Xamarin.Essentials.Resource.Dimension.notification_right_icon_size = global::MessageApplication.Android.Resource.Dimension.notification_right_icon_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_right_side_padding_top = global::MessageApplication.Android.Resource.Dimension.notification_right_side_padding_top;
+			global::Xamarin.Essentials.Resource.Dimension.notification_small_icon_background_padding = global::MessageApplication.Android.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xamarin.Essentials.Resource.Dimension.notification_small_icon_size_as_large = global::MessageApplication.Android.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xamarin.Essentials.Resource.Dimension.notification_subtext_size = global::MessageApplication.Android.Resource.Dimension.notification_subtext_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_top_pad = global::MessageApplication.Android.Resource.Dimension.notification_top_pad;
+			global::Xamarin.Essentials.Resource.Dimension.notification_top_pad_large_text = global::MessageApplication.Android.Resource.Dimension.notification_top_pad_large_text;
+			global::Xamarin.Essentials.Resource.Drawable.notification_action_background = global::MessageApplication.Android.Resource.Drawable.notification_action_background;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg = global::MessageApplication.Android.Resource.Drawable.notification_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_low = global::MessageApplication.Android.Resource.Drawable.notification_bg_low;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_low_normal = global::MessageApplication.Android.Resource.Drawable.notification_bg_low_normal;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_low_pressed = global::MessageApplication.Android.Resource.Drawable.notification_bg_low_pressed;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_normal = global::MessageApplication.Android.Resource.Drawable.notification_bg_normal;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_normal_pressed = global::MessageApplication.Android.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xamarin.Essentials.Resource.Drawable.notification_icon_background = global::MessageApplication.Android.Resource.Drawable.notification_icon_background;
+			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_bg = global::MessageApplication.Android.Resource.Drawable.notification_template_icon_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_low_bg = global::MessageApplication.Android.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notification_tile_bg = global::MessageApplication.Android.Resource.Drawable.notification_tile_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notify_panel_notification_icon_bg = global::MessageApplication.Android.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Essentials.Resource.Id.actions = global::MessageApplication.Android.Resource.Id.actions;
+			global::Xamarin.Essentials.Resource.Id.action_container = global::MessageApplication.Android.Resource.Id.action_container;
+			global::Xamarin.Essentials.Resource.Id.action_divider = global::MessageApplication.Android.Resource.Id.action_divider;
+			global::Xamarin.Essentials.Resource.Id.action_image = global::MessageApplication.Android.Resource.Id.action_image;
+			global::Xamarin.Essentials.Resource.Id.action_text = global::MessageApplication.Android.Resource.Id.action_text;
+			global::Xamarin.Essentials.Resource.Id.all = global::MessageApplication.Android.Resource.Id.all;
+			global::Xamarin.Essentials.Resource.Id.async = global::MessageApplication.Android.Resource.Id.async;
+			global::Xamarin.Essentials.Resource.Id.blocking = global::MessageApplication.Android.Resource.Id.blocking;
+			global::Xamarin.Essentials.Resource.Id.bottom = global::MessageApplication.Android.Resource.Id.bottom;
+			global::Xamarin.Essentials.Resource.Id.browser_actions_header_text = global::MessageApplication.Android.Resource.Id.browser_actions_header_text;
+			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_items = global::MessageApplication.Android.Resource.Id.browser_actions_menu_items;
+			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_item_icon = global::MessageApplication.Android.Resource.Id.browser_actions_menu_item_icon;
+			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_item_text = global::MessageApplication.Android.Resource.Id.browser_actions_menu_item_text;
+			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_view = global::MessageApplication.Android.Resource.Id.browser_actions_menu_view;
+			global::Xamarin.Essentials.Resource.Id.center = global::MessageApplication.Android.Resource.Id.center;
+			global::Xamarin.Essentials.Resource.Id.center_horizontal = global::MessageApplication.Android.Resource.Id.center_horizontal;
+			global::Xamarin.Essentials.Resource.Id.center_vertical = global::MessageApplication.Android.Resource.Id.center_vertical;
+			global::Xamarin.Essentials.Resource.Id.chronometer = global::MessageApplication.Android.Resource.Id.chronometer;
+			global::Xamarin.Essentials.Resource.Id.clip_horizontal = global::MessageApplication.Android.Resource.Id.clip_horizontal;
+			global::Xamarin.Essentials.Resource.Id.clip_vertical = global::MessageApplication.Android.Resource.Id.clip_vertical;
+			global::Xamarin.Essentials.Resource.Id.end = global::MessageApplication.Android.Resource.Id.end;
+			global::Xamarin.Essentials.Resource.Id.fill = global::MessageApplication.Android.Resource.Id.fill;
+			global::Xamarin.Essentials.Resource.Id.fill_horizontal = global::MessageApplication.Android.Resource.Id.fill_horizontal;
+			global::Xamarin.Essentials.Resource.Id.fill_vertical = global::MessageApplication.Android.Resource.Id.fill_vertical;
+			global::Xamarin.Essentials.Resource.Id.forever = global::MessageApplication.Android.Resource.Id.forever;
+			global::Xamarin.Essentials.Resource.Id.icon = global::MessageApplication.Android.Resource.Id.icon;
+			global::Xamarin.Essentials.Resource.Id.icon_group = global::MessageApplication.Android.Resource.Id.icon_group;
+			global::Xamarin.Essentials.Resource.Id.info = global::MessageApplication.Android.Resource.Id.info;
+			global::Xamarin.Essentials.Resource.Id.italic = global::MessageApplication.Android.Resource.Id.italic;
+			global::Xamarin.Essentials.Resource.Id.left = global::MessageApplication.Android.Resource.Id.left;
+			global::Xamarin.Essentials.Resource.Id.line1 = global::MessageApplication.Android.Resource.Id.line1;
+			global::Xamarin.Essentials.Resource.Id.line3 = global::MessageApplication.Android.Resource.Id.line3;
+			global::Xamarin.Essentials.Resource.Id.none = global::MessageApplication.Android.Resource.Id.none;
+			global::Xamarin.Essentials.Resource.Id.normal = global::MessageApplication.Android.Resource.Id.normal;
+			global::Xamarin.Essentials.Resource.Id.notification_background = global::MessageApplication.Android.Resource.Id.notification_background;
+			global::Xamarin.Essentials.Resource.Id.notification_main_column = global::MessageApplication.Android.Resource.Id.notification_main_column;
+			global::Xamarin.Essentials.Resource.Id.notification_main_column_container = global::MessageApplication.Android.Resource.Id.notification_main_column_container;
+			global::Xamarin.Essentials.Resource.Id.right = global::MessageApplication.Android.Resource.Id.right;
+			global::Xamarin.Essentials.Resource.Id.right_icon = global::MessageApplication.Android.Resource.Id.right_icon;
+			global::Xamarin.Essentials.Resource.Id.right_side = global::MessageApplication.Android.Resource.Id.right_side;
+			global::Xamarin.Essentials.Resource.Id.start = global::MessageApplication.Android.Resource.Id.start;
+			global::Xamarin.Essentials.Resource.Id.tag_transition_group = global::MessageApplication.Android.Resource.Id.tag_transition_group;
+			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_event_manager = global::MessageApplication.Android.Resource.Id.tag_unhandled_key_event_manager;
+			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_listeners = global::MessageApplication.Android.Resource.Id.tag_unhandled_key_listeners;
+			global::Xamarin.Essentials.Resource.Id.text = global::MessageApplication.Android.Resource.Id.text;
+			global::Xamarin.Essentials.Resource.Id.text2 = global::MessageApplication.Android.Resource.Id.text2;
+			global::Xamarin.Essentials.Resource.Id.time = global::MessageApplication.Android.Resource.Id.time;
+			global::Xamarin.Essentials.Resource.Id.title = global::MessageApplication.Android.Resource.Id.title;
+			global::Xamarin.Essentials.Resource.Id.top = global::MessageApplication.Android.Resource.Id.top;
+			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::MessageApplication.Android.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_page = global::MessageApplication.Android.Resource.Layout.browser_actions_context_menu_page;
+			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_row = global::MessageApplication.Android.Resource.Layout.browser_actions_context_menu_row;
+			global::Xamarin.Essentials.Resource.Layout.notification_action = global::MessageApplication.Android.Resource.Layout.notification_action;
+			global::Xamarin.Essentials.Resource.Layout.notification_action_tombstone = global::MessageApplication.Android.Resource.Layout.notification_action_tombstone;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_custom_big = global::MessageApplication.Android.Resource.Layout.notification_template_custom_big;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_icon_group = global::MessageApplication.Android.Resource.Layout.notification_template_icon_group;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_part_chronometer = global::MessageApplication.Android.Resource.Layout.notification_template_part_chronometer;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_part_time = global::MessageApplication.Android.Resource.Layout.notification_template_part_time;
+			global::Xamarin.Essentials.Resource.String.status_bar_notification_info_overflow = global::MessageApplication.Android.Resource.String.status_bar_notification_info_overflow;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Info = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Time = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Title = global::MessageApplication.Android.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionContainer = global::MessageApplication.Android.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionText = global::MessageApplication.Android.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Xamarin.Essentials.Resource.Style.Widget_Support_CoordinatorLayout = global::MessageApplication.Android.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem;
+			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_alpha = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem_alpha;
+			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_android_alpha = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_android_color = global::MessageApplication.Android.Resource.Styleable.ColorStateListItem_android_color;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_keylines = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MessageApplication.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily = global::MessageApplication.Android.Resource.Styleable.FontFamily;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_font = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_font;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_fontStyle = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_fontWeight = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_font = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_font;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontStyle = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontWeight = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_ttcIndex = global::MessageApplication.Android.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderAuthority = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderCerts = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderPackage = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderQuery = global::MessageApplication.Android.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor = global::MessageApplication.Android.Resource.Styleable.GradientColor;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem = global::MessageApplication.Android.Resource.Styleable.GradientColorItem;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_color = global::MessageApplication.Android.Resource.Styleable.GradientColorItem_android_color;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_offset = global::MessageApplication.Android.Resource.Styleable.GradientColorItem_android_offset;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerColor = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_centerColor;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerX = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_centerX;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerY = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_centerY;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_endColor = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_endColor;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_endX = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_endX;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_endY = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_endY;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_gradientRadius = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_startColor = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_startColor;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_startX = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_startX;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_startY = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_startY;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_tileMode = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_tileMode;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_type = global::MessageApplication.Android.Resource.Styleable.GradientColor_android_type;
+			global::Xamarin.Essentials.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::MessageApplication.Android.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::MessageApplication.Android.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::MessageApplication.Android.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::MessageApplication.Android.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -6171,115 +6535,118 @@ namespace MessageApplication.Android
 			public const int ic_vol_type_tv_light = 2131165462;
 			
 			// aapt resource value: 0x7F070117
-			public const int mr_button_connected_dark = 2131165463;
+			public const int message = 2131165463;
 			
 			// aapt resource value: 0x7F070118
-			public const int mr_button_connected_light = 2131165464;
+			public const int mr_button_connected_dark = 2131165464;
 			
 			// aapt resource value: 0x7F070119
-			public const int mr_button_connecting_dark = 2131165465;
+			public const int mr_button_connected_light = 2131165465;
 			
 			// aapt resource value: 0x7F07011A
-			public const int mr_button_connecting_light = 2131165466;
+			public const int mr_button_connecting_dark = 2131165466;
 			
 			// aapt resource value: 0x7F07011B
-			public const int mr_button_dark = 2131165467;
+			public const int mr_button_connecting_light = 2131165467;
 			
 			// aapt resource value: 0x7F07011C
-			public const int mr_button_light = 2131165468;
+			public const int mr_button_dark = 2131165468;
 			
 			// aapt resource value: 0x7F07011D
-			public const int mr_dialog_close_dark = 2131165469;
+			public const int mr_button_light = 2131165469;
 			
 			// aapt resource value: 0x7F07011E
-			public const int mr_dialog_close_light = 2131165470;
+			public const int mr_dialog_close_dark = 2131165470;
 			
 			// aapt resource value: 0x7F07011F
-			public const int mr_dialog_material_background_dark = 2131165471;
+			public const int mr_dialog_close_light = 2131165471;
 			
 			// aapt resource value: 0x7F070120
-			public const int mr_dialog_material_background_light = 2131165472;
+			public const int mr_dialog_material_background_dark = 2131165472;
 			
 			// aapt resource value: 0x7F070121
-			public const int mr_group_collapse = 2131165473;
+			public const int mr_dialog_material_background_light = 2131165473;
 			
 			// aapt resource value: 0x7F070122
-			public const int mr_group_expand = 2131165474;
+			public const int mr_group_collapse = 2131165474;
 			
 			// aapt resource value: 0x7F070123
-			public const int mr_media_pause_dark = 2131165475;
+			public const int mr_group_expand = 2131165475;
 			
 			// aapt resource value: 0x7F070124
-			public const int mr_media_pause_light = 2131165476;
+			public const int mr_media_pause_dark = 2131165476;
 			
 			// aapt resource value: 0x7F070125
-			public const int mr_media_play_dark = 2131165477;
+			public const int mr_media_pause_light = 2131165477;
 			
 			// aapt resource value: 0x7F070126
-			public const int mr_media_play_light = 2131165478;
+			public const int mr_media_play_dark = 2131165478;
 			
 			// aapt resource value: 0x7F070127
-			public const int mr_media_stop_dark = 2131165479;
+			public const int mr_media_play_light = 2131165479;
 			
 			// aapt resource value: 0x7F070128
-			public const int mr_media_stop_light = 2131165480;
+			public const int mr_media_stop_dark = 2131165480;
 			
 			// aapt resource value: 0x7F070129
-			public const int mr_vol_type_audiotrack_dark = 2131165481;
+			public const int mr_media_stop_light = 2131165481;
 			
 			// aapt resource value: 0x7F07012A
-			public const int mr_vol_type_audiotrack_light = 2131165482;
+			public const int mr_vol_type_audiotrack_dark = 2131165482;
 			
 			// aapt resource value: 0x7F07012B
-			public const int mtrl_snackbar_background = 2131165483;
+			public const int mr_vol_type_audiotrack_light = 2131165483;
 			
 			// aapt resource value: 0x7F07012C
-			public const int mtrl_tabs_default_indicator = 2131165484;
+			public const int mtrl_snackbar_background = 2131165484;
 			
 			// aapt resource value: 0x7F07012D
-			public const int navigation_empty_icon = 2131165485;
+			public const int mtrl_tabs_default_indicator = 2131165485;
 			
 			// aapt resource value: 0x7F07012E
-			public const int notification_action_background = 2131165486;
+			public const int navigation_empty_icon = 2131165486;
 			
 			// aapt resource value: 0x7F07012F
-			public const int notification_bg = 2131165487;
+			public const int notification_action_background = 2131165487;
 			
 			// aapt resource value: 0x7F070130
-			public const int notification_bg_low = 2131165488;
+			public const int notification_bg = 2131165488;
 			
 			// aapt resource value: 0x7F070131
-			public const int notification_bg_low_normal = 2131165489;
+			public const int notification_bg_low = 2131165489;
 			
 			// aapt resource value: 0x7F070132
-			public const int notification_bg_low_pressed = 2131165490;
+			public const int notification_bg_low_normal = 2131165490;
 			
 			// aapt resource value: 0x7F070133
-			public const int notification_bg_normal = 2131165491;
+			public const int notification_bg_low_pressed = 2131165491;
 			
 			// aapt resource value: 0x7F070134
-			public const int notification_bg_normal_pressed = 2131165492;
+			public const int notification_bg_normal = 2131165492;
 			
 			// aapt resource value: 0x7F070135
-			public const int notification_icon_background = 2131165493;
+			public const int notification_bg_normal_pressed = 2131165493;
 			
 			// aapt resource value: 0x7F070136
-			public const int notification_template_icon_bg = 2131165494;
+			public const int notification_icon_background = 2131165494;
 			
 			// aapt resource value: 0x7F070137
-			public const int notification_template_icon_low_bg = 2131165495;
+			public const int notification_template_icon_bg = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int notification_tile_bg = 2131165496;
+			public const int notification_template_icon_low_bg = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int notify_panel_notification_icon_bg = 2131165497;
+			public const int notification_tile_bg = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int tooltip_frame_dark = 2131165498;
+			public const int notify_panel_notification_icon_bg = 2131165498;
 			
 			// aapt resource value: 0x7F07013B
-			public const int tooltip_frame_light = 2131165499;
+			public const int tooltip_frame_dark = 2131165499;
+			
+			// aapt resource value: 0x7F07013C
+			public const int tooltip_frame_light = 2131165500;
 			
 			static Drawable()
 			{
@@ -12218,6 +12585,22 @@ namespace MessageApplication.Android
 			}
 			
 			private Styleable()
+			{
+			}
+		}
+		
+		public partial class Xml
+		{
+			
+			// aapt resource value: 0x7F0F0000
+			public const int xamarin_essentials_fileprovider_file_paths = 2131689472;
+			
+			static Xml()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Xml()
 			{
 			}
 		}

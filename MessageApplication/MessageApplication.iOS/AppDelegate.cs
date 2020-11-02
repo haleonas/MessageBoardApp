@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
+using MessageApplication.Bootstrap;
+using MessageApplication.iOS.Bootstrap;
 using UIKit;
 
 namespace MessageApplication.iOS
@@ -22,7 +24,7 @@ namespace MessageApplication.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(new IosSetup()));
 
             return base.FinishedLaunching(app, options);
         }

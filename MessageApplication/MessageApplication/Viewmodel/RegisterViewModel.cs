@@ -27,13 +27,13 @@ namespace MessageApplication.Viewmodel
                 };
                 try
                 {
-                    await App._Client.GetTable<Users>().InsertAsync(user);
-                    await App.Current.MainPage.DisplayAlert("Success", "User registered", "Ok");
-                    await App.Current.MainPage.Navigation.PopAsync();
+                    await App.Client.GetTable<Users>().InsertAsync(user);
+                    await Application.Current.MainPage.DisplayAlert("Success", "User registered", "Ok");
+                    await Application.Current.MainPage.Navigation.PopAsync();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    await App.Current.MainPage.DisplayAlert("Error", "Couldn't register user", "ok");
+                    await Application.Current.MainPage.DisplayAlert("Error", "Couldn't register user", "ok");
                 }
 
             }, () =>

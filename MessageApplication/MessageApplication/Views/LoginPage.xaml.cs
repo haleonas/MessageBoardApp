@@ -1,4 +1,6 @@
-﻿using MessageApplication.Viewmodel;
+﻿using Autofac;
+using MessageApplication.Bootstrap;
+using MessageApplication.Viewmodel;
 using Xamarin.Forms;
 
 namespace MessageApplication.Views
@@ -9,10 +11,8 @@ namespace MessageApplication.Views
         public LoginPage()
         {
             InitializeComponent();
-            
-            var viewmodel = new LoginViewModel();
-            BindingContext = viewmodel;
-           
+            //var viewmodel = new LoginViewModel();
+            BindingContext = AppContainer.Container.Resolve<LoginViewModel>();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using MessageApplication.Bootstrap;
 using MessageApplication.Models;
 using MessageApplication.Views;
 using Microsoft.WindowsAzure.MobileServices;
@@ -12,12 +13,14 @@ namespace MessageApplication
     public partial class App : Application
     {
         
-        public static MobileServiceClient _Client = new MobileServiceClient("https://messageapplication.azurewebsites.net");
+        public static readonly MobileServiceClient Client = new MobileServiceClient("https://messageapplication.azurewebsites.net");
         public static Users User = new Users();
         
-        public App()
+        public App(AppSetup setup)
         {
             InitializeComponent();
+
+            AppContainer.Container = setup.CreateContainer();
 
             MainPage = new NavigationPage(new LoginPage());
         }

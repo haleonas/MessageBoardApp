@@ -87,8 +87,10 @@
         <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     </PropertyGroup>
     <ItemGroup>
+        <Compile Include="Bootstrap\IOSSetup.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
+        <Compile Include="Services\PlatformService.cs" />
         <None Include="Entitlements.plist" />
         <None Include="Info.plist" />
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +111,7 @@
         <PackageReference Include="Autofac" Version="6.0.0" />
         <PackageReference Include="Microsoft.Azure.Mobile.Client" Version="4.1.2" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
         <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
         <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
     </ItemGroup>
@@ -119,8 +122,9 @@
         </ProjectReference>
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Bootstrap" />
-      <Folder Include="Services" />
+      <BundleResource Include="Resources\message.png" />
+      <BundleResource Include="Resources\message@2x.png" />
+      <BundleResource Include="Resources\message@3x.png" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using MessageApplication.Android.Bootstrap;
 
 namespace MessageApplication.Android
 {
@@ -19,7 +20,7 @@ namespace MessageApplication.Android
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            LoadApplication(new App(new AndroidSetup()));
         }
     }
 }

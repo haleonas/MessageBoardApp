@@ -4,7 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:MessageApplication.Viewmodel;assembly=MessageApplication"
              x:Class="MessageApplication.Views.RegisterPage"
-             x:DataType="viewModels:RegisterViewModel">
+             x:DataType="viewModels:RegisterViewModel"
+             Title="Register">
     
     <ContentPage.Content>
         <StackLayout
@@ -13,9 +14,13 @@
             <Entry Placeholder="Username"
                    Text="{Binding Username}"/>
             <Entry Placeholder="Password"
-                   Text="{Binding Password}"/>
+                   Text="{Binding Password}"
+                   Keyboard="Text"
+                   IsPassword="true"/>
             <Entry Placeholder="Confirm Password"
-                   Text="{Binding ConfirmPassword}"/>
+                   Text="{Binding ConfirmPassword}"
+                   Keyboard="Text"
+                   IsPassword="true"/>
             <Button Text="Register"
                     Command="{Binding RegisterBtn}"/>
             

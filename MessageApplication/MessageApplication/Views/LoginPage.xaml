@@ -4,22 +4,27 @@
              xmlns:local="clr-namespace:MessageApplication"
              xmlns:viewModels="clr-namespace:MessageApplication.Viewmodel;assembly=MessageApplication"
              x:Class="MessageApplication.Views.LoginPage"
-             x:DataType="viewModels:LoginViewModel">
+             x:DataType="viewModels:LoginViewModel"
+             Title="Login">
     
     <ContentPage.Content>
     <StackLayout 
         VerticalOptions="Center"
         Margin="20">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        
+        <Label Text="{Binding Text}" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand" 
+           />
         <Entry 
             Text = "{Binding Username}"
             Placeholder="Username"/>
         <Entry 
             Text = "{Binding Password}"
             Placeholder="Password"
+            Keyboard="Text"
+            IsPassword="true"
         />
         <Button Text="Login"
                 Command="{Binding LoginBtn}"/>

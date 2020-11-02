@@ -1,13 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MessageApplication.Views.MessageBoardPage">
+             x:Class="MessageApplication.Views.MessageBoardPage"
+             xmlns:viewModels="clr-namespace:MessageApplication.Viewmodel;assembly=MessageApplication"
+            
+             Title="Message Board">
+    
+    <!--x:DataType="viewModels:MessageBoardViewModel"-->
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Add"
+            Command="{ Binding AddBtn }"
+            IconImageSource="message.png"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hello, world!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView ItemsSource="{Binding Posts}"
+                 SelectedItem="{Binding ItemSelected}">
+            <ListView.ItemTemplate>
+               <DataTemplate>
+                   <TextCell
+                       Detail="{Binding Username}"
+                       Text="{ Binding Message }"/>
+               </DataTemplate>
+           </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
