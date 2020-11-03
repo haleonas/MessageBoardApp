@@ -1,6 +1,8 @@
 ﻿using System;
+using MessageApplication.Services;
 using MessageApplication.Viewmodel;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.Xaml.Internals;
 
 namespace MessageApplication.Views
 {
@@ -8,10 +10,10 @@ namespace MessageApplication.Views
     public partial class MessageBoardPage
     {
         private readonly MessageBoardViewModel _messageBoardViewModel;
-        public MessageBoardPage()
+        public MessageBoardPage(INavigationService navigation,IDisplayAlertService displayAlertService)
         {
             InitializeComponent();
-            _messageBoardViewModel = new MessageBoardViewModel();
+            _messageBoardViewModel = new MessageBoardViewModel(navigation,displayAlertService);
             BindingContext = _messageBoardViewModel;
         }
 

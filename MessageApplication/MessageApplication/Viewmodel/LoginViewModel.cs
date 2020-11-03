@@ -14,13 +14,14 @@ namespace MessageApplication.Viewmodel
         private string _password = string.Empty;
         private string _text = string.Empty;
         private string _onlineStatus = string.Empty;
+        private static readonly NavigationService Navigation = new NavigationService();
+        private static readonly DisplayAlertService DisplayAlertService = new DisplayAlertService();
         public ICommand LoginBtn { get; }
         public ICommand RegisterBtn { get;  }
 
         public LoginViewModel(IPlatformService platformService)
         {
             Text = platformService.GetPlatform();
-            
             OnlineStatus = App.GetNetworkAccess() == NetworkAccess.Internet ? "Online" : "Offline";
             
             LoginBtn = new Command(async () =>
@@ -28,17 +29,17 @@ namespace MessageApplication.Viewmodel
                 if (Username.Equals("") || Password.Equals("")) return;
                 if (await Users.Login(Username,Password))
                 {
-                    await Application.Current.MainPage.Navigation.PushAsync(new MessageBoardPage());
+                    await Navigation.PushAsync(new MessageBoardPage(Navigation,DisplayAlertService));
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Something went wrong", "ok");
+                    await DisplayAlertService.DisplayAlert("Error", "Something went wrong", "ok");
                 }
             }, () => !Username.Equals("") && !Password.Equals("") && App.GetNetworkAccess() == NetworkAccess.Internet);
             
-            RegisterBtn = new Command(() =>
+            RegisterBtn = new Command(async() =>
             {
-                Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
+                await Navigation.PushAsync(new RegisterPage(Navigation,DisplayAlertService));
             }, () => App.GetNetworkAccess() == NetworkAccess.Internet); //can't register a new user without internet
         }
 
@@ -51,7 +52,8 @@ namespace MessageApplication.Viewmodel
                 if (table.Count <= 0) return;
                 
                 App.User = table[0];
-                Application.Current.MainPage.Navigation.PushAsync(new MessageBoardPage());
+                
+                Navigation?.PushAsync(new MessageBoardPage(Navigation,DisplayAlertService));
             }
         }
 

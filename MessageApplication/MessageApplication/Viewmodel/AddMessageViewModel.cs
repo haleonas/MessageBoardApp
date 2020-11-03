@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using MessageApplication.Models;
+using MessageApplication.Services;
 using Xamarin.Forms;
 
 namespace MessageApplication.Viewmodel
@@ -11,7 +12,7 @@ namespace MessageApplication.Viewmodel
 
         public ICommand AddBtn { get; }
 
-        public AddMessageViewModel()
+        public AddMessageViewModel(INavigationService navigation,IDisplayAlertService displayAlertService)
         {    
             AddBtn = new Command(async () =>
             {
@@ -23,12 +24,13 @@ namespace MessageApplication.Viewmodel
                 try
                 {
                     await App.Client.GetTable<Posts>().InsertAsync(post);
-                    await Application.Current.MainPage.DisplayAlert("Success", "Message added", "Ok");
-                    await Application.Current.MainPage.Navigation.PopAsync();
+                    await displayAlertService.DisplayAlert("Success", "Message added", "Ok");
+
+                    await navigation.PopAsync();
                 }
                 catch (Exception)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Message couldn't be added", "Ok");
+                    await displayAlertService.DisplayAlert("Error", "Message couldn't be added", "Ok");
                 }
             }, () => !Message.Equals(""));
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using MessageApplication.Models;
+using MessageApplication.Services;
 using MessageApplication.Views;
 using Xamarin.Forms;
 
@@ -14,7 +15,7 @@ namespace MessageApplication.Viewmodel
 
         public ICommand RegisterBtn { get; }
 
-        public RegisterViewModel()
+        public RegisterViewModel(INavigationService navigation,IDisplayAlertService displayAlertService)
         {
             RegisterBtn = new Command(async () =>
             {
@@ -28,12 +29,13 @@ namespace MessageApplication.Viewmodel
                 try
                 {
                     await App.Client.GetTable<Users>().InsertAsync(user);
-                    await Application.Current.MainPage.DisplayAlert("Success", "User registered", "Ok");
-                    await Application.Current.MainPage.Navigation.PopAsync();
+                    await displayAlertService.DisplayAlert("Success", "User registered", "Ok");
+                    await navigation.PopAsync();
+                    //await Application.Current.MainPage.Navigation.PopAsync();
                 }
                 catch (Exception)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Couldn't register user", "ok");
+                    await displayAlertService.DisplayAlert("Error", "Couldn't register user", "ok");
                 }
 
             }, () =>

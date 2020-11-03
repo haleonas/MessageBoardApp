@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MessageApplication.Views.MessageBoardPage"
              xmlns:viewModels="clr-namespace:MessageApplication.Viewmodel;assembly=MessageApplication"
+             xmlns:models="clr-namespace:MessageApplication.Models;assembly=MessageApplication"
              NavigationPage.HasBackButton="False"
+             x:DataType="viewModels:MessageBoardViewModel"
              Title="Message Board">
-    
-    <!--x:DataType="viewModels:MessageBoardViewModel"-->
     
     <ContentPage.ToolbarItems>
         
@@ -18,12 +18,14 @@
     
     <ContentPage.Content>
         <ListView ItemsSource="{Binding Posts}"
-                 SelectedItem="{Binding ItemSelected}">
+                 SelectedItem="{Binding ItemSelected}"
+                >
             <ListView.ItemTemplate>
                <DataTemplate>
                    <TextCell
                        Detail="{Binding Username}"
-                       Text="{ Binding Message }"/>
+                       Text="{ Binding Message }"
+                       x:DataType="models:Posts"/>
                </DataTemplate>
            </ListView.ItemTemplate>
         </ListView>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
 using MessageApplication.Models;
+using MessageApplication.Services;
 using MessageApplication.Views;
 using SQLite;
 using Xamarin.Essentials;
@@ -18,15 +19,22 @@ namespace MessageApplication.Viewmodel
         public ICommand AddBtn { get; }
         public ICommand ItemNavigation { get; }
 
-        public MessageBoardViewModel()
+        private readonly DisplayAlertService _displayAlertService;
+        private readonly NavigationService _navigationService;
+
+        public MessageBoardViewModel(INavigationService navigation,IDisplayAlertService displayAlertService)
         {
+            _displayAlertService = (DisplayAlertService) displayAlertService;
+            _navigationService = (NavigationService) navigation;
+            
             AddBtn = new Command(() =>
             {
-                Application.Current.MainPage.Navigation.PushAsync(new AddMessagePage());
+                navigation.PushAsync(new AddMessagePage(navigation,displayAlertService));
+                //Application.Current.MainPage.Navigation.PushAsync(new AddMessagePage(navigation));
             }, () => App.GetNetworkAccess() == NetworkAccess.Internet);
             ItemNavigation = new Command(() =>
             {
-                Application.Current.MainPage.DisplayAlert("Success", "YAY", "WOOOO");
+                _displayAlertService.DisplayAlert("Success", "YAY", "WOOOO");
             });
         }
         
@@ -48,7 +56,7 @@ namespace MessageApplication.Viewmodel
                 _itemSelected = value;
                 if (_itemSelected == null) return; 
                 OnPropertyChanged();
-                Application.Current.MainPage.Navigation.PushAsync(new DetailMessagePage(_itemSelected));
+                _navigationService?.PushAsync(new DetailMessagePage(_itemSelected));
             }
         }
 
@@ -61,8 +69,11 @@ namespace MessageApplication.Viewmodel
                     Posts = await App.Client.GetTable<Posts>().ToListAsync();
                     using (var conn = new SQLiteConnection(App.DatabaseLocation))
                     {
+                        //creates table if it doesn't exist, skips if it exists
                         conn.CreateTable<Posts>();
+                        //deletes all posts even if empty
                         conn.DeleteAll<Posts>();
+                        //insert all posts that was retrieved
                         foreach (var post in Posts)
                         {
                             conn.Insert(post);
@@ -71,7 +82,7 @@ namespace MessageApplication.Viewmodel
                 }
                 catch (Exception)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error","Couldn't retrieve posts","ok");
+                    await _displayAlertService.DisplayAlert("Error","Couldn't retrieve posts","ok");
                 }
             }
             else
@@ -92,7 +103,6 @@ namespace MessageApplication.Viewmodel
             }
             
             App.User = new Users();
-            //Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
         }
     }
 }
