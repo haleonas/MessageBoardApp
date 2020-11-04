@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MessageApplication.Views.MessageBoardPage"
@@ -7,27 +8,42 @@
              NavigationPage.HasBackButton="False"
              x:DataType="viewModels:MessageBoardViewModel"
              Title="Message Board">
-    
+
     <ContentPage.ToolbarItems>
-        
+
         <ToolbarItem
             Text="Add"
             Command="{ Binding AddBtn }"
-            IconImageSource="message.png"/>
+            IconImageSource="message.png" />
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding Posts}"
-                 SelectedItem="{Binding ItemSelected}"
-                >
-            <ListView.ItemTemplate>
-               <DataTemplate>
-                   <TextCell
-                       Detail="{Binding Username}"
-                       Text="{ Binding Message }"
-                       x:DataType="models:Posts"/>
-               </DataTemplate>
-           </ListView.ItemTemplate>
-        </ListView>
+        <RefreshView
+            x:DataType="viewModels:MessageBoardViewModel"
+            Command="{Binding ReloadListCmd}"
+            IsRefreshing="{Binding Busy,Mode=TwoWay}">
+            <CollectionView
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding ItemSelected}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid x:DataType="models:Posts"
+                              Padding="20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Username}" />
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Message}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
     </ContentPage.Content>
 </ContentPage>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using MessageApplication.Models;
 using MessageApplication.Services;
@@ -15,9 +15,12 @@ namespace MessageApplication.Viewmodel
     {
         private List<Posts> _posts;
         private Posts _itemSelected;
+        private bool _busy;
         
+        public ObservableCollection<Posts> Items { get; }
+
         public ICommand AddBtn { get; }
-        public ICommand ItemNavigation { get; }
+        public ICommand ReloadListCmd { get;  }
 
         private readonly DisplayAlertService _displayAlertService;
         private readonly NavigationService _navigationService;
@@ -26,24 +29,40 @@ namespace MessageApplication.Viewmodel
         {
             _displayAlertService = (DisplayAlertService) displayAlertService;
             _navigationService = (NavigationService) navigation;
+            Items = new ObservableCollection<Posts>();
             
             AddBtn = new Command(() =>
             {
                 navigation.PushAsync(new AddMessagePage(navigation,displayAlertService));
                 //Application.Current.MainPage.Navigation.PushAsync(new AddMessagePage(navigation));
             }, () => App.GetNetworkAccess() == NetworkAccess.Internet);
-            ItemNavigation = new Command(() =>
-            {
-                _displayAlertService.DisplayAlert("Success", "YAY", "WOOOO");
-            });
+            ReloadListCmd = new Command( ReloadList);
         }
-        
+
+        private void ReloadList()
+        {
+            Busy = true;
+            UpdateTable();
+            Busy = false;
+        }
+
         public List<Posts> Posts
         {
             get => _posts;
             set
             {
                 _posts = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool Busy
+        {
+            get => _busy;
+            set
+            {
+                if (_busy == value) return;
+                _busy = value;
                 OnPropertyChanged();
             }
         }
@@ -62,6 +81,7 @@ namespace MessageApplication.Viewmodel
 
         public async void UpdateTable()
         {
+            Items.Clear();
             if (App.GetNetworkAccess() == NetworkAccess.Internet)
             {
                 try
@@ -92,6 +112,10 @@ namespace MessageApplication.Viewmodel
                     conn.CreateTable<Posts>();
                     Posts = conn.Table<Posts>().ToList();
                 }
+            }
+            foreach (var post in Posts)
+            {
+                Items.Add(post);
             }
         }
 
