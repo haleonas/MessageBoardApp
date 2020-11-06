@@ -26,7 +26,7 @@ namespace MessageApplication.Models
             return true;
         }
 
-        public static async Task<bool> Register(string username,string password,IDisplayAlertService displayAlertService)
+        public static async Task<bool> Register(string username,string password)
         {
             var user = new Users
             {
@@ -36,13 +36,11 @@ namespace MessageApplication.Models
             try
             {
                 await App.Client.GetTable<Users>().InsertAsync(user);
-                await displayAlertService.DisplayAlert("Success", "User registered", "Ok");
-                //await Application.Current.MainPage.Navigation.PopAsync();
                 return true;
             }
             catch (Exception)
             {
-                await displayAlertService.DisplayAlert("Error", "Couldn't register user", "ok");
+               
                 return false;
             }
         }

@@ -20,12 +20,16 @@ namespace MessageApplication.Viewmodel
             RegisterBtn = new Command(async () =>
             {
                 //register user
-                var result = await Users.Register(Username, Password, displayAlertService);
+                var result = await Users.Register(Username, Password);
                 if (result)
                 {
+                    await displayAlertService.DisplayAlert("Success", "User registered", "Ok");
                     await navigation.PopAsync();
                 }
-
+                else
+                {
+                    await displayAlertService.DisplayAlert("Error", "Couldn't register user", "ok");
+                }
             }, () =>
             {
                 if (Username.Equals("") || Password.Equals("") || ConfirmPassword.Equals("")) return false;
