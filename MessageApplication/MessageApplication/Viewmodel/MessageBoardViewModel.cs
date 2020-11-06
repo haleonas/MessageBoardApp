@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using MessageApplication.Models;
@@ -21,32 +20,30 @@ namespace MessageApplication.Viewmodel
 
         public ICommand AddBtn { get; }
         public ICommand ReloadListCmd { get;  }
-
-        private readonly DisplayAlertService _displayAlertService;
+        
         private readonly NavigationService _navigationService;
 
         public MessageBoardViewModel(INavigationService navigation,IDisplayAlertService displayAlertService)
         {
-            _displayAlertService = (DisplayAlertService) displayAlertService;
             _navigationService = (NavigationService) navigation;
             Items = new ObservableCollection<Posts>();
             
             AddBtn = new Command(() =>
             {
                 navigation.PushAsync(new AddMessagePage(navigation,displayAlertService));
-                //Application.Current.MainPage.Navigation.PushAsync(new AddMessagePage(navigation));
             }, () => App.GetNetworkAccess() == NetworkAccess.Internet);
-            ReloadListCmd = new Command( ReloadList);
+            ReloadListCmd = new Command(ReloadList);
         }
 
         private void ReloadList()
         {
             Busy = true;
             UpdateTable();
+            RefreshButton((Command)ReloadListCmd);
             Busy = false;
         }
 
-        public List<Posts> Posts
+        private List<Posts> Posts
         {
             get => _posts;
             set
@@ -84,34 +81,11 @@ namespace MessageApplication.Viewmodel
             Items.Clear();
             if (App.GetNetworkAccess() == NetworkAccess.Internet)
             {
-                try
-                {
-                    Posts = await App.Client.GetTable<Posts>().ToListAsync();
-                    using (var conn = new SQLiteConnection(App.DatabaseLocation))
-                    {
-                        //creates table if it doesn't exist, skips if it exists
-                        conn.CreateTable<Posts>();
-                        //deletes all posts even if empty
-                        conn.DeleteAll<Posts>();
-                        //insert all posts that was retrieved
-                        foreach (var post in Posts)
-                        {
-                            conn.Insert(post);
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    await _displayAlertService.DisplayAlert("Error","Couldn't retrieve posts","ok");
-                }
+                Posts = await Models.Posts.RetrieveList();
             }
             else
             {
-                using (var conn = new SQLiteConnection(App.DatabaseLocation))
-                {
-                    conn.CreateTable<Posts>();
-                    Posts = conn.Table<Posts>().ToList();
-                }
+                Posts = Models.Posts.RetrieveOfflineList();
             }
             foreach (var post in Posts)
             {
@@ -127,6 +101,11 @@ namespace MessageApplication.Viewmodel
             }
             
             App.User = new Users();
+        }
+        
+        private void RefreshButton(Command btn)
+        {
+            btn.ChangeCanExecute();
         }
     }
 }

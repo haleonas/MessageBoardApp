@@ -13,16 +13,15 @@ namespace MessageApplication.Viewmodel
         private string _username = string.Empty;
         private string _password = string.Empty;
         private string _text = string.Empty;
-        private string _onlineStatus = string.Empty;
+        private string _onlineStatus = App.GetNetworkAccess() == NetworkAccess.Internet ? "Online" : "Offline";
         private static readonly NavigationService Navigation = new NavigationService();
         private static readonly DisplayAlertService DisplayAlertService = new DisplayAlertService();
         public ICommand LoginBtn { get; }
-        public ICommand RegisterBtn { get;  }
+        public ICommand RegisterBtn { get; }
 
         public LoginViewModel(IPlatformService platformService)
         {
             Text = platformService.GetPlatform();
-            OnlineStatus = App.GetNetworkAccess() == NetworkAccess.Internet ? "Online" : "Offline";
             
             LoginBtn = new Command(async () =>
             {
@@ -45,16 +44,9 @@ namespace MessageApplication.Viewmodel
 
         public static void CheckIfLoggedIn()
         {
-            using (var conn = new SQLiteConnection(App.DatabaseLocation))
-            {
-                conn.CreateTable<Users>();
-                var table = conn.Table<Users>().ToList();
-                if (table.Count <= 0) return;
-                
-                App.User = table[0];
-                
+            var result = Users.CheckLoggedInStatus();
+            if(result)
                 Navigation?.PushAsync(new MessageBoardPage(Navigation,DisplayAlertService));
-            }
         }
 
         public string Username

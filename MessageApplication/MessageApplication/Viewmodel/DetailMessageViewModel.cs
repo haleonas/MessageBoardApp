@@ -31,7 +31,6 @@ namespace MessageApplication.Viewmodel
         {
             Message = post.Message;
             Username = post.Username;
-            //Application.Current.MainPage.DisplayAlert("Success", _post.Message, "ok");
         }
     }
 }

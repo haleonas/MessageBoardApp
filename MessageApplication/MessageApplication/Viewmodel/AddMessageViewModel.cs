@@ -16,19 +16,13 @@ namespace MessageApplication.Viewmodel
         {    
             AddBtn = new Command(async () =>
             {
-                var post = new Posts
+                var result = await Posts.SendPosts(Message);
+                if (result)
                 {
-                    Message = Message,
-                    Username = App.User.Username
-                };
-                try
-                {
-                    await App.Client.GetTable<Posts>().InsertAsync(post);
                     await displayAlertService.DisplayAlert("Success", "Message added", "Ok");
-
                     await navigation.PopAsync();
                 }
-                catch (Exception)
+                else
                 {
                     await displayAlertService.DisplayAlert("Error", "Message couldn't be added", "Ok");
                 }
