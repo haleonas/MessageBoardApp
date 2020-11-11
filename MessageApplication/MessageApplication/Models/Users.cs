@@ -16,12 +16,16 @@ namespace MessageApplication.Models
 
         public static async Task<bool> Login(string username, string password)
         {
-            var user = (await App.Client.GetTable<Users>().Where(u => u.Username == username).ToListAsync()).FirstOrDefault();
-            if (user == null) return false;
-            if (user.Password != password) return false;
-            App.User = user;
+                var user = (await App.Client.GetTable<Users>().Where(u => u.Username == username).ToListAsync())
+                    .FirstOrDefault();
+                if (user == null) return false;
+                if (user.Password != password) return false;
+                App.User = user;
 
-            SaveLoggedInUser();
+                SaveLoggedInUser();
+
+
+
 
             return true;
         }

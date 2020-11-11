@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using MessageApplication.Models;
@@ -20,7 +21,8 @@ namespace MessageApplication.Viewmodel
 
         public ICommand AddBtn { get; }
         public ICommand ReloadListCmd { get;  }
-        
+        public ICommand LogoutCommand { get;  }
+
         private readonly NavigationService _navigationService;
 
         public MessageBoardViewModel(INavigationService navigation,IDisplayAlertService displayAlertService)
@@ -30,11 +32,12 @@ namespace MessageApplication.Viewmodel
             
             AddBtn = new Command(() =>
             {
-                navigation.PushAsync(new AddMessagePage(navigation,displayAlertService));
+                navigation.PushAsync(new AddMessagePage(navigation,displayAlertService, new Posts()));
             }, () => App.GetNetworkAccess() == NetworkAccess.Internet);
             ReloadListCmd = new Command(ReloadList);
+            LogoutCommand = new Command(LogoutUser);
         }
-
+        
         private void ReloadList()
         {
             Busy = true;
@@ -101,6 +104,7 @@ namespace MessageApplication.Viewmodel
             }
             
             App.User = new Users();
+            Environment.Exit(0);
         }
         
         private void RefreshButton(Command btn)

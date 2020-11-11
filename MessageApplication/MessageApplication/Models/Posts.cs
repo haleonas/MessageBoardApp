@@ -11,7 +11,7 @@ namespace MessageApplication.Models
         public string Message { get; set; }
         public string Username { get; set; }
 
-        public static async Task<bool> SendPosts(string message)
+        public async Task<bool> SendPosts(string message)
         {
             var post = new Posts
             {
@@ -22,7 +22,6 @@ namespace MessageApplication.Models
             {
                 await App.Client.GetTable<Posts>().InsertAsync(post);
                 return true;
-               
             }
             catch (Exception)
             {
@@ -59,6 +58,7 @@ namespace MessageApplication.Models
                         conn.Insert(post);
                     }
                 }
+
                 return postsList;
             }
             catch (Exception)

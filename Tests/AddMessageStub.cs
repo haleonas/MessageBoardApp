@@ -1,18 +1,16 @@
-﻿using System;
 using System.Windows.Input;
 using MessageApplication.Models;
 using MessageApplication.Services;
 using Xamarin.Forms;
 
-namespace MessageApplication.Viewmodel
+namespace Tests
 {
-    public class AddMessageViewModel:BaseViewModel
+    public class AddMessageStub
     {
-        private string _message = "";
-
-        public ICommand AddBtn { get; }
+        private string _message;
         
-        public AddMessageViewModel(INavigationService navigation,IDisplayAlertService displayAlertService, Posts post)
+        public ICommand AddBtn { get; }
+        public AddMessageStub(INavigationService navigation,IDisplayAlertService displayAlertService, PostsSpy post)
         {    
             AddBtn = new Command(async () =>
             {
@@ -26,23 +24,15 @@ namespace MessageApplication.Viewmodel
                 {
                     await displayAlertService.DisplayAlert("Error", "Message couldn't be added", "Ok");
                 }
-            }, () => !Message.Equals(""));
+            });
         }
 
         public string Message
         {
             get => _message;
-            set
-            {
-                _message = value;
-                OnPropertyChanged();
-                RefreshButton((Command) AddBtn);
-            }
+            set => _message = value;
         }
-
-        private void RefreshButton(Command btn)
-        {
-            btn.ChangeCanExecute();
-        }
+        
+        
     }
 }

@@ -26,7 +26,6 @@ namespace MessageApplication.Views
         protected override bool OnBackButtonPressed()
         {
             MessageBoardViewModel.LogoutUser();
-            Environment.Exit(0);
             return base.OnBackButtonPressed();
         }
     }

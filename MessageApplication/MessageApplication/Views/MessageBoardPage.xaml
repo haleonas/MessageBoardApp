@@ -9,12 +9,17 @@
              x:DataType="viewModels:MessageBoardViewModel"
              Title="Message Board">
 
+    
+    
     <ContentPage.ToolbarItems>
-
+        
         <ToolbarItem
             Text="Add"
             Command="{ Binding AddBtn }"
             IconImageSource="message.png" />
+        <ToolbarItem
+            Text="Logout"
+            Command="{Binding LogoutCommand}"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

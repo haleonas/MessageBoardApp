@@ -1,12 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=67fb983c_002Dd073_002D4467_002Db66d_002D08c52f1e49b2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CBFAAA9E-DA87-4DBE-943E-0D025A9CD0FF::.NETCoreApp,Version=v3.1::Tests.Tests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=67fb983c_002Dd073_002D4467_002Db66d_002D08c52f1e49b2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::CBFAAA9E-DA87-4DBE-943E-0D025A9CD0FF::.NETCoreApp,Version=v3.1::Tests.Tests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=26af3563_002D124c_002D43e1_002D972b_002Ddfc5f97d733d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CBFAAA9E-DA87-4DBE-943E-0D025A9CD0FF::.NETCoreApp,Version=v3.1::Tests.Tests.Test1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CBFAAA9E-DA87-4DBE-943E-0D025A9CD0FF::.NETCoreApp,Version=v3.1::Tests.Tests.NavigationTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=26af3563_002D124c_002D43e1_002D972b_002Ddfc5f97d733d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::CBFAAA9E-DA87-4DBE-943E-0D025A9CD0FF::.NETCoreApp,Version=v3.1::Tests.Tests.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::CBFAAA9E-DA87-4DBE-943E-0D025A9CD0FF::.NETCoreApp,Version=v3.1::Tests.Tests.NavigationTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
