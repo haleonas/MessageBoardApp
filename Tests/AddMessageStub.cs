@@ -10,7 +10,7 @@ namespace Tests
         private string _message;
         
         public ICommand AddBtn { get; }
-        public AddMessageStub(INavigationService navigation,IDisplayAlertService displayAlertService, PostsSpy post)
+        public AddMessageStub(INavigationService navigation,IDisplayAlertService displayAlertService, Posts post)
         {    
             AddBtn = new Command(async () =>
             {

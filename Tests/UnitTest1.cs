@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using MessageApplication.Models;
 using MessageApplication.Services;
+using MessageApplication.Viewmodel;
 using Moq;
 using NUnit.Framework;
 using Xamarin.Forms;
@@ -62,10 +63,9 @@ namespace Tests
         {
             var navService = new Mock<INavigationService>();
             var displayService = new Mock<IDisplayAlertService>();
-            var postMock = new Mock<PostsSpy>();
-            var postsSpy = postMock.Object;
+            var postsSpy = new PostsSpy();
 
-            var unit = new AddMessageStub(navService.Object, displayService.Object, postsSpy) {Message = "hej123"};
+            var unit = new AddMessageViewModel(navService.Object, displayService.Object, postsSpy) {Message = "hej123"};
 
             unit.AddBtn.Execute(null);
             
@@ -82,7 +82,7 @@ namespace Tests
             var displayService = new Mock<IDisplayAlertService>();
             var postsSpy = new PostsSpy();
 
-            var unit = new AddMessageStub(navService.Object, displayService.Object, postsSpy);
+            var unit = new AddMessageViewModel(navService.Object, displayService.Object, postsSpy);
             
             unit.AddBtn.Execute(null);
             

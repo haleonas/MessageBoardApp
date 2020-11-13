@@ -11,7 +11,7 @@ namespace MessageApplication.Models
         public string Message { get; set; }
         public string Username { get; set; }
 
-        public async Task<bool> SendPosts(string message)
+        public virtual async Task<bool> SendPosts(string message)
         {
             var post = new Posts
             {

@@ -9,7 +9,7 @@ namespace Tests
     {
         public bool SendPostsCalled;
 
-        public new async Task<bool> SendPosts(string message)
+        public override async Task<bool> SendPosts(string message)
         {
             SendPostsCalled = true;
             return await Task.FromResult(!message.IsNullOrEmpty());
